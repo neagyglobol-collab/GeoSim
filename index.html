@@ -2,304 +2,217 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090d0b">
-  <meta name="description" content="WolfVPN — быстрый VPN с 13 маршрутами, поддержкой Happ и доступом к зарубежным сервисам.">
-  <meta property="og:title" content="WolfVPN — быстрый и стабильный VPN">
-  <meta property="og:description" content="13 маршрутов, зарубежные сервисы, игры и стабильное подключение.">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0705">
+  <meta name="description" content="WolfVPN — персональная сеть Wolf Network. Happ, 13 маршрутов и автоматическое обновление.">
+  <meta property="og:title" content="WolfVPN — Интернет без границ">
+  <meta property="og:description" content="Одна персональная подписка для телефона и компьютера. 13 маршрутов, Happ и автоматическое обновление.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://vpn.geosim.online/">
-  <title>WolfVPN — быстрый и стабильный VPN</title>
+  <meta property="og:url" content="https://geosim.online/">
+  <link rel="icon" href="wolfvpn-autumn-2026.webp" type="image/webp">
+  <title>WolfVPN — Wolf Network</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
+<canvas id="ambientStars" aria-hidden="true"></canvas>
+<div class="autumnFall" id="autumnFall" aria-hidden="true"></div>
 
+<div class="wrap">
   <header class="header">
-    <div class="container nav">
-      <a class="brand" href="#top">
-        <span class="logo">W</span>
-        <span>
-          <strong>WolfVPN</strong>
-          <small>Wolf Network</small>
-        </span>
-      </a>
+    <a class="brand" href="#top" aria-label="WolfVPN">
+      <div class="brandLogo"><img src="wolfvpn-autumn-2026.webp" alt="WolfVPN"></div>
+      <div><strong>WolfVPN</strong></div>
+    </a>
 
-      <nav class="menu">
-        <a href="#about">О VPN</a>
-        <a href="#routes">Маршруты</a>
-        <a href="#price">Тариф</a>
-        <a href="#faq">FAQ</a>
-      </nav>
+    <nav class="nav">
+      <a href="#about">О сервисе</a>
+      <a href="#routes">Маршруты</a>
+      <a href="#setup">Подключение</a>
+      <a href="#faq">FAQ</a>
+    </nav>
 
-      <a class="small-btn" href="https://t.me/WolfVPN_ShopBot" target="_blank" rel="noopener">Подключить</a>
+    <div class="headerActions">
+      <a class="openProfile" href="https://vpn.geosim.online/hub/">Моя подписка</a>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="grid" aria-hidden="true"></div>
+    <section class="returnHero reveal">
+      <canvas id="heroStars" aria-hidden="true"></canvas>
 
-      <div class="container hero-inner">
-        <div class="hero-copy reveal">
-          <div class="tag"><span></span> WOLF NETWORK · ONLINE</div>
+      <div class="returnHeroLogo">
+        <img src="wolfvpn-autumn-2026.webp" alt="WolfVPN">
+      </div>
 
-          <h1>
-            Интернет без лишних<br>
-            <em>ограничений.</em>
-          </h1>
+      <div class="returnHeroCopy">
+        <span class="microLabel">WOLFVPN / WOLF NETWORK</span>
+        <h1><span>Интернет без</span><strong>границ</strong></h1>
+        <p>
+          Одна персональная подписка для телефона и компьютера.
+          Happ, несколько маршрутов и автоматическое обновление — в одном месте.
+        </p>
 
-          <p class="lead">
-            WolfVPN — быстрый VPN для повседневного использования:
-            зарубежные сервисы, игры, мессенджеры и стабильные маршруты
-            в одном подключении.
-          </p>
-
-          <div class="hero-buttons">
-            <a class="main-btn" href="https://t.me/WolfVPN_ShopBot" target="_blank" rel="noopener">
-              <span>Подключить WolfVPN</span>
-              <b>Telegram</b>
-            </a>
-            <a class="outline-btn" href="#routes">Посмотреть маршруты</a>
-          </div>
-
-          <div class="stats">
-            <div><b>13</b><span>Маршрутов</span></div>
-            <div><b>Happ</b><span>Подключение</span></div>
-            <div><b>24/7</b><span>Сеть онлайн</span></div>
-          </div>
+        <div class="returnHeroButtons">
+          <a class="returnPrimary" href="https://t.me/WolfVPN_ShopBot" target="_blank" rel="noopener">Получить WolfVPN</a>
+          <a class="returnSecondary" href="https://vpn.geosim.online/hub/">Открыть личный Hub</a>
         </div>
 
-        <div class="network-card reveal delay">
-          <div class="network-head">
-            <span>WOLF // ROUTE MAP</span>
-            <b>LIVE</b>
-          </div>
-
-          <div class="network-map">
-            <div class="mesh"></div>
-            <div class="node n1"><i></i><span>NL</span></div>
-            <div class="node n2"><i></i><span>DE</span></div>
-            <div class="node n3"><i></i><span>RU</span></div>
-            <div class="node n4"><i></i><span>EU</span></div>
-            <div class="node n5"><i></i><span>MOBILE</span></div>
-
-            <svg class="links" viewBox="0 0 600 420" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M85 125 C180 70, 210 90, 292 160"></path>
-              <path d="M292 160 C370 100, 445 120, 515 85"></path>
-              <path d="M292 160 C345 220, 395 270, 485 318"></path>
-              <path d="M85 125 C155 225, 215 270, 295 325"></path>
-              <path d="M295 325 C355 280, 390 255, 485 318"></path>
-            </svg>
-
-            <div class="pulse pulse1"></div>
-            <div class="pulse pulse2"></div>
-          </div>
-
-          <div class="network-foot">
-            <span>FAST ROUTING</span>
-            <span>REALITY</span>
-            <span>HAPP</span>
-            <span>HWID</span>
-          </div>
+        <div class="liveUsersBadge">
+          <i></i><b>13</b><span>маршрутов WolfVPN</span>
+          <small>одна подписка</small>
         </div>
       </div>
     </section>
 
-    <section class="ticker">
-      <div>
-        <span>13 МАРШРУТОВ</span><i>◆</i>
-        <span>HAPP</span><i>◆</i>
-        <span>ИГРОВЫЕ МАРШРУТЫ</span><i>◆</i>
-        <span>ЗАРУБЕЖНЫЕ СЕРВИСЫ</span><i>◆</i>
-        <span>АВТООБНОВЛЕНИЕ</span><i>◆</i>
-        <span>WOLF NETWORK</span><i>◆</i>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="container two-cols">
-        <div class="heading reveal">
-          <span>01 / WOLFVPN</span>
-          <h2>Один VPN вместо десятка ручных настроек</h2>
-        </div>
-
-        <div class="text reveal delay">
-          <p>
-            Подписка содержит несколько маршрутов под разные сценарии:
-            обычное использование, мобильный интернет, игры и отдельные сервисы.
-          </p>
-          <p>
-            Добавляешь подписку в Happ один раз — дальше маршруты и изменения
-            приходят автоматически.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section soft" id="routes">
-      <div class="container">
-        <div class="heading narrow reveal">
-          <span>02 / МАРШРУТЫ</span>
-          <h2>Выбирай маршрут под задачу</h2>
-        </div>
-
-        <div class="cards">
-          <article class="card reveal">
-            <b>01</b>
-            <h3>Нидерланды</h3>
-            <p>Быстрый универсальный маршрут для повседневного использования.</p>
-          </article>
-
-          <article class="card reveal delay">
-            <b>02</b>
-            <h3>Германия Gaming</h3>
-            <p>Отдельный игровой маршрут с упором на стабильность соединения.</p>
-          </article>
-
-          <article class="card reveal delay2">
-            <b>03</b>
-            <h3>Россия + YouTube</h3>
-            <p>Российский выход с отдельной логикой маршрутизации для сервисов.</p>
-          </article>
-
-          <article class="card reveal">
-            <b>04</b>
-            <h3>Mobile</h3>
-            <p>Маршрут для мобильных сетей, когда обычные варианты работают хуже.</p>
-          </article>
-
-          <article class="card reveal delay">
-            <b>05</b>
-            <h3>Обходы</h3>
-            <p>Несколько дополнительных маршрутов на случай проблем с основными.</p>
-          </article>
-
-          <article class="card reveal delay2">
-            <b>13</b>
-            <h3>Всего 13 маршрутов</h3>
-            <p>Все маршруты находятся в одной подписке и обновляются централизованно.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container feature-split">
-        <div class="heading reveal">
-          <span>03 / ТЕХНОЛОГИИ</span>
-          <h2>Подключил один раз — дальше всё проще</h2>
-        </div>
-
-        <div class="tech-list">
-          <div class="tech reveal"><b>01</b><div><h3>Персональная подписка</h3><p>У каждого пользователя свой доступ и срок действия.</p></div></div>
-          <div class="tech reveal delay"><b>02</b><div><h3>Автообновление</h3><p>Новые маршруты и изменения появляются без ручного импорта.</p></div></div>
-          <div class="tech reveal delay2"><b>03</b><div><h3>Multi-route</h3><p>Несколько сетевых сценариев внутри одной подписки.</p></div></div>
-          <div class="tech reveal"><b>04</b><div><h3>HWID-защита</h3><p>Количество устройств контролируется на стороне сервиса.</p></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="price">
-      <div class="container price-card reveal">
+    <section class="compactSection reveal" id="about">
+      <div class="compactHead">
         <div>
-          <span class="section-tag">04 / ТАРИФ</span>
-          <h2>Просто один тариф</h2>
-          <p>Без сложных пакетов и десятка уровней подписки.</p>
+          <span class="microLabel">WOLF / SIMPLE</span>
+          <h2>Подключение без лишней возни</h2>
         </div>
+        <p>
+          Получаете одну персональную ссылку, добавляете её в Happ и выбираете маршрут под текущую сеть и задачу.
+        </p>
+      </div>
 
-        <div class="price-box">
-          <span>WolfVPN · 1 месяц</span>
-          <strong>200 ₽</strong>
-          <small>Оплата через Telegram. Дополнительные устройства можно подключить отдельно.</small>
-          <a href="https://t.me/WolfVPN_ShopBot" target="_blank" rel="noopener">Купить подписку</a>
-        </div>
+      <div class="compactFeatures">
+        <article><b>Одна подписка</b><span>Для телефона и компьютера.</span></article>
+        <article><b>Автообновление</b><span>Изменения маршрутов приходят автоматически.</span></article>
+        <article><b>13 маршрутов</b><span>Основные, игровые и резервные варианты.</span></article>
+        <article><b>HWID-защита</b><span>Контроль подключённых устройств.</span></article>
       </div>
     </section>
 
-    <section class="section soft">
-      <div class="container">
-        <div class="heading narrow reveal">
-          <span>05 / КАК НАЧАТЬ</span>
-          <h2>Три шага до подключения</h2>
-        </div>
-
-        <div class="steps">
-          <div class="step reveal">
-            <b>01</b>
-            <div><h3>Открой бота</h3><p>Перейди в официальный бот WolfVPN в Telegram.</p></div>
-          </div>
-
-          <div class="step reveal delay">
-            <b>02</b>
-            <div><h3>Получишь ссылку</h3><p>После активации появится персональная ссылка подписки.</p></div>
-          </div>
-
-          <div class="step reveal delay2">
-            <b>03</b>
-            <div><h3>Добавь в Happ</h3><p>Импортируй подписку и выбирай нужный маршрут.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="faq">
-      <div class="container faq">
-        <div class="heading reveal">
-          <span>06 / FAQ</span>
-          <h2>Коротко о главном</h2>
-        </div>
-
+    <section class="compactSection reveal" id="routes">
+      <div class="compactHead">
         <div>
-          <details class="reveal">
-            <summary>Какое приложение используется?</summary>
-            <p>Основное приложение для подключения — Happ.</p>
-          </details>
+          <span class="microLabel">WOLF / ROUTES</span>
+          <h2>Маршруты под разные задачи</h2>
+        </div>
+        <p>Не нужно вручную импортировать десяток конфигов — всё находится внутри одной подписки.</p>
+      </div>
 
-          <details class="reveal delay">
-            <summary>Нужно настраивать каждый маршрут вручную?</summary>
-            <p>Нет. Маршруты приходят через одну персональную подписку.</p>
-          </details>
+      <div class="routeHighlights">
+        <div><strong>Нидерланды</strong><span>БЫСТРЫЙ</span></div>
+        <div><strong>Германия</strong><span>GAMING</span></div>
+        <div><strong>Россия</strong><span>YOUTUBE</span></div>
+        <div><strong>Mobile</strong><span>МОБИЛЬНЫЕ СЕТИ</span></div>
+      </div>
 
-          <details class="reveal delay2">
-            <summary>Можно использовать несколько устройств?</summary>
-            <p>Да. Количество устройств зависит от подключённого лимита.</p>
-          </details>
+      <details class="routeDetails">
+        <summary>Показать все 13 маршрутов</summary>
+        <div class="routeCompactList">
+          <span>🇳🇱 Нидерланды ⚡ Быстрый</span>
+          <span>🇩🇪 Германия [Игровой]</span>
+          <span>🇩🇪 Германия [Игровой] 2</span>
+          <span>🇷🇺 РФ | YouTube без рекламы</span>
+          <span>🇪🇺 Обход NEW №1</span>
+          <span>🇪🇺 Обход NEW VK №2</span>
+          <span>🇪🇺 Обход NEW №3</span>
+          <span>🇪🇺 Обход NEW №4</span>
+          <span>🇪🇺 Обход NEW №5</span>
+          <span>🇪🇺 Обход Mobile №6</span>
+          <span>🇪🇺 Обход NEW №7</span>
+          <span>🇪🇺 Обход NEW №8</span>
+          <span>🇪🇺 Обход NEW №9</span>
+        </div>
+      </details>
+    </section>
 
-          <details class="reveal">
-            <summary>Куда писать, если что-то не работает?</summary>
-            <p>Поддержка WolfVPN: <a href="https://t.me/iLastFantasy" target="_blank" rel="noopener">@iLastFantasy</a>.</p>
-          </details>
+    <section class="compactSection reveal" id="setup">
+      <div class="compactHead">
+        <div>
+          <span class="microLabel">WOLF / START</span>
+          <h2>Подключение за 3 шага</h2>
+        </div>
+        <p>Основной клиент WolfVPN — Happ. Подписка работает как единая точка входа ко всем маршрутам.</p>
+      </div>
+
+      <div class="guideGrid">
+        <article class="guideCard">
+          <span class="guideNum">01</span>
+          <h3>Установите Happ</h3>
+          <p>Выберите вашу платформу.</p>
+          <div class="guideButtons">
+            <a href="https://play.google.com/store/apps/details?id=com.happproxy" target="_blank" rel="noopener">Android</a>
+            <a href="https://apps.apple.com/us/app/happ-proxy-utility/id6504287215" target="_blank" rel="noopener">iOS</a>
+            <a href="https://github.com/Happ-proxy/happ-desktop/releases/latest/download/setup-Happ.x64.exe" target="_blank" rel="noopener">Windows</a>
+          </div>
+        </article>
+
+        <article class="guideCard">
+          <span class="guideNum">02</span>
+          <h3>Получите подписку</h3>
+          <p>Бот выдаст персональную ссылку после активации доступа.</p>
+          <a class="guideMain" href="https://t.me/WolfVPN_ShopBot" target="_blank" rel="noopener">Открыть Telegram-бот</a>
+        </article>
+
+        <article class="guideCard">
+          <span class="guideNum">03</span>
+          <h3>Добавьте в Happ</h3>
+          <p>Импортируйте ссылку один раз. После этого можно переключать маршруты прямо в приложении.</p>
+          <a class="guideSecondary" href="https://vpn.geosim.online/hub/">Открыть Hub</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="compactSection reveal">
+      <div class="miniStats">
+        <div><b>13</b><span>маршрутов</span></div>
+        <div><b>24/7</b><span>сеть онлайн</span></div>
+        <div><b>Happ</b><span>основной клиент</span></div>
+        <div><b>Auto</b><span>обновление</span></div>
+      </div>
+    </section>
+
+    <section class="compactSection reveal" id="faq">
+      <div class="compactHead">
+        <div>
+          <span class="microLabel">WOLF / FAQ</span>
+          <h2>Частые вопросы</h2>
+        </div>
+      </div>
+
+      <div class="faqList">
+        <div class="faqItem">
+          <button type="button"><span>Нужно настраивать каждый маршрут вручную?</span><span>+</span></button>
+          <div class="faqAnswer">Нет. Все маршруты находятся внутри одной персональной подписки и обновляются централизованно.</div>
+        </div>
+        <div class="faqItem">
+          <button type="button"><span>Можно пользоваться на телефоне и компьютере?</span><span>+</span></button>
+          <div class="faqAnswer">Да. Количество одновременно используемых устройств зависит от лимита вашей подписки.</div>
+        </div>
+        <div class="faqItem">
+          <button type="button"><span>Что делать, если один маршрут не работает?</span><span>+</span></button>
+          <div class="faqAnswer">Переключитесь на другой маршрут в Happ. Для этого в подписке и предусмотрено несколько вариантов подключения.</div>
+        </div>
+        <div class="faqItem">
+          <button type="button"><span>Где находится моя персональная ссылка?</span><span>+</span></button>
+          <div class="faqAnswer">В личной посадочной странице WolfVPN Hub. Перейти в неё можно кнопкой «Моя подписка».</div>
         </div>
       </div>
     </section>
 
-    <section class="final">
-      <div class="container reveal">
-        <span>WOLF NETWORK</span>
-        <h2>Подключайся один раз. Маршрут выбирай по ситуации.</h2>
-        <a class="main-btn" href="https://t.me/WolfVPN_ShopBot" target="_blank" rel="noopener">
-          <span>Открыть WolfVPN</span>
-          <b>Telegram</b>
-        </a>
+    <section class="compactEnd reveal">
+      <div class="supportCompact">
+        <div>
+          <span class="microLabel">WOLF / SUPPORT</span>
+          <h2>Нужна помощь?</h2>
+          <p>Поддержка WolfVPN в Telegram.</p>
+        </div>
+        <a href="https://t.me/iLastFantasy" target="_blank" rel="noopener">Написать в поддержку</a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-inner">
-      <div class="brand">
-        <span class="logo">W</span>
-        <span>
-          <strong>WolfVPN</strong>
-          <small>Wolf Network</small>
-        </span>
-      </div>
-
-      <p>© <span id="year"></span> WolfVPN · vpn.geosim.online</p>
-    </div>
+  <footer class="footer">
+    <div><b>WolfVPN</b> · Wolf Network</div>
+    <div>© <span id="year"></span> · geosim.online</div>
   </footer>
+</div>
 
-  <script src="script.js"></script>
+<a class="floatingSupport" href="https://t.me/iLastFantasy" target="_blank" rel="noopener" aria-label="Поддержка">?</a>
+
+<script src="script.js"></script>
 </body>
 </html>
